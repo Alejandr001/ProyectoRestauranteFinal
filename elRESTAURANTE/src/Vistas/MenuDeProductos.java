@@ -200,6 +200,7 @@ public class MenuDeProductos extends javax.swing.JPanel {
         jTDos = new javax.swing.JTable();
         cajaUno = new java.awt.Label();
         cajaDos = new java.awt.Label();
+        jLabel9 = new javax.swing.JLabel();
 
         jLabelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/comidarap.png"))); // NOI18N
         jLabelfondo.setText("jLabel1");
@@ -474,13 +475,22 @@ public class MenuDeProductos extends javax.swing.JPanel {
 
         jPBACKfondo.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, 240, 330));
 
-        cajaUno.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
-        cajaUno.setText("label1");
+        cajaUno.setAlignment(java.awt.Label.CENTER);
+        cajaUno.setBackground(new java.awt.Color(102, 102, 102));
+        cajaUno.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        cajaUno.setForeground(new java.awt.Color(204, 204, 204));
         jPBACKfondo.add(cajaUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 240, 40));
 
-        cajaDos.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
-        cajaDos.setText("label2");
+        cajaDos.setAlignment(java.awt.Label.CENTER);
+        cajaDos.setBackground(new java.awt.Color(102, 102, 102));
+        cajaDos.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        cajaDos.setForeground(new java.awt.Color(204, 204, 204));
         jPBACKfondo.add(cajaDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 240, 40));
+
+        jLabel9.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/comidarap.png"))); // NOI18N
+        jLabel9.setText("jLabel9");
+        jPBACKfondo.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 0, 1000, 430));
 
         add(jPBACKfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 430));
     }// </editor-fold>//GEN-END:initComponents
@@ -717,6 +727,7 @@ jLBebidas.setForeground(Color.black);
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jLabelContendor;
     private javax.swing.JLabel jLabelTIcket;
     private javax.swing.JLabel jLabelfondo;
