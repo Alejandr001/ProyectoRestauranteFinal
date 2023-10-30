@@ -72,7 +72,7 @@ public class MenuDeProductos extends javax.swing.JPanel {
         pepData.guardarPep(pep);
     }
        System.out.println("1");
-    contador++;
+
        System.out.println("2");
        JOptionPane.showMessageDialog(null, "Pedido cargado con exito");
 }

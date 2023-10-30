@@ -47,6 +47,22 @@ public class PedidoData {
         return generatedId;  // Devolvemos el ID generado o -1 en caso de error
     }
     
+    public boolean pagarPedido(int idPedido) {
+    try (Connection con = Conexion.getConexion()) {
+        String sql = "UPDATE pedido SET estado = ? WHERE idPedido = ?";
+        try (PreparedStatement statement = con.prepareStatement(sql)) {
+            statement.setBoolean(1, true); // Cambia el estado a true
+            statement.setInt(2, idPedido); // El idPedido es el identificador único del pedido a pagar
+            int filasAfectadas = statement.executeUpdate();
+            return filasAfectadas > 0; // Devuelve true si al menos una fila fue actualizada
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    return false; // En caso de error o si no se actualiza ninguna fila
+}
     
     public List<Pedido> obtenerPedidosConEstado(int estado) {
         List<Pedido> pedidos = new ArrayList<>();
