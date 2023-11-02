@@ -17,6 +17,7 @@ import Entidades.Mesa;
 
 
 import Entidades.Reserva;
+import java.awt.Color;
 
 import java.awt.event.ActionListener;
 import java.sql.Connection;
@@ -325,11 +326,10 @@ public class Reservas extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLELIMINARMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLELIMINARMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLELIMINARMouseEntered
+jLELIMINAR.setForeground(Color.yellow);    }//GEN-LAST:event_jLELIMINARMouseEntered
 
     private void jLELIMINARMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLELIMINARMouseExited
-        // TODO add your handling code here:
+       jLELIMINAR.setForeground(Color.DARK_GRAY); // TODO add your handling code here:
     }//GEN-LAST:event_jLELIMINARMouseExited
 
     private void jLELIMINARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLELIMINARMouseClicked
@@ -388,12 +388,10 @@ public class Reservas extends javax.swing.JPanel {
     }//GEN-LAST:event_jLBUSCAR1MouseClicked
 
     private void jLBUSCAR1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBUSCAR1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLBUSCAR1MouseEntered
+jLBUSCAR1.setForeground(Color.yellow);    }//GEN-LAST:event_jLBUSCAR1MouseEntered
 
     private void jLBUSCAR1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBUSCAR1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLBUSCAR1MouseExited
+jLBUSCAR1.setForeground(Color.DARK_GRAY);    }//GEN-LAST:event_jLBUSCAR1MouseExited
 
     private void jLAGREGARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAGREGARMouseClicked
 
@@ -429,11 +427,12 @@ public class Reservas extends javax.swing.JPanel {
     }//GEN-LAST:event_jLAGREGARMouseClicked
 
     private void jLAGREGARMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAGREGARMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLAGREGARMouseEntered
+jLAGREGAR.setForeground(Color.yellow);    }//GEN-LAST:event_jLAGREGARMouseEntered
 
     private void jLAGREGARMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAGREGARMouseExited
         // TODO add your handling code here:
+        jLAGREGAR.setForeground(Color.DARK_GRAY);
+                
     }//GEN-LAST:event_jLAGREGARMouseExited
 
     private void jLMODIFICARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLMODIFICARMouseClicked
@@ -473,12 +472,10 @@ if (idInput != null && !idInput.isEmpty()) {
     }//GEN-LAST:event_jLMODIFICARMouseClicked
 
     private void jLMODIFICARMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLMODIFICARMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLMODIFICARMouseEntered
+jLMODIFICAR.setForeground(Color.yellow);    }//GEN-LAST:event_jLMODIFICARMouseEntered
 
     private void jLMODIFICARMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLMODIFICARMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLMODIFICARMouseExited
+jLMODIFICAR.setForeground(Color.DARK_GRAY);    }//GEN-LAST:event_jLMODIFICARMouseExited
 
     private void jTextNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNombreActionPerformed
         // TODO add your handling code here:

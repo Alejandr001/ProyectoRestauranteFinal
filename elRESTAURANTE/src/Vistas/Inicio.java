@@ -38,8 +38,8 @@ public class Inicio extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/fastFood.jpg"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, -10, 1040, 640));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/adesivo-chalk-pizza-personalizado-adesivo-para-pizzaria.jpg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -60, 1040, 640));
 
         jLabelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/comidarap.png"))); // NOI18N
         jLabelfondo.setText("jLabel1");

@@ -220,24 +220,28 @@ public class MenuDeProductos extends javax.swing.JPanel {
         jPBACKfondo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPBACKfondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Icono/lemon_122986 (1).png"))); // NOI18N
         jLabel1.setOpaque(true);
         jLabel1.setPreferredSize(new java.awt.Dimension(55, 55));
         jPBACKfondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 60, 50));
 
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Icono/beer_drink_icon_146801.png"))); // NOI18N
         jLabel2.setOpaque(true);
         jLabel2.setPreferredSize(new java.awt.Dimension(55, 55));
         jPBACKfondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 70, 50));
 
+        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Icono/burger_food_icon_146845.png"))); // NOI18N
         jLabel4.setOpaque(true);
         jLabel4.setPreferredSize(new java.awt.Dimension(55, 55));
         jPBACKfondo.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 70, 50));
 
+        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Icono/32387taco_98856.png"))); // NOI18N
         jLabel6.setOpaque(true);
@@ -285,19 +289,23 @@ public class MenuDeProductos extends javax.swing.JPanel {
         });
         jPBACKfondo.add(jLLomos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 130, 70));
 
+        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Icono/32382hamburger_98925.png"))); // NOI18N
         jLabel7.setOpaque(true);
         jLabel7.setPreferredSize(new java.awt.Dimension(55, 55));
         jPBACKfondo.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 60, 60));
 
+        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Icono/recipepizzaicon_109877 (1).png"))); // NOI18N
         jLabel8.setOpaque(true);
         jLabel8.setPreferredSize(new java.awt.Dimension(55, 55));
         jPBACKfondo.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 70, 60));
 
+        jTTres.setBackground(new java.awt.Color(51, 51, 51));
         jTTres.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jTTres.setForeground(new java.awt.Color(255, 255, 255));
         jTTres.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -318,6 +326,8 @@ public class MenuDeProductos extends javax.swing.JPanel {
                 "Nombre", "Cantidad", "Precio"
             }
         ));
+        jTTres.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jTTres.setShowHorizontalLines(true);
         jTTres.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTTresMouseClicked(evt);
@@ -439,8 +449,27 @@ public class MenuDeProductos extends javax.swing.JPanel {
         jLabelTIcket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/receipt-template-with-barcode.jpg"))); // NOI18N
         jPBACKfondo.add(jLabelTIcket, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 0, 220, 420));
 
+        jTUno.setAutoCreateRowSorter(true);
+        jTUno.setBackground(new java.awt.Color(204, 204, 204));
+        jTUno.setForeground(new java.awt.Color(0, 0, 0));
         jTUno.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
@@ -450,6 +479,9 @@ public class MenuDeProductos extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTUno.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jTUno.setSelectionBackground(new java.awt.Color(0, 0, 0));
+        jTUno.setShowHorizontalLines(true);
         jTUno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTUnoMouseClicked(evt);
@@ -459,8 +491,26 @@ public class MenuDeProductos extends javax.swing.JPanel {
 
         jPBACKfondo.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 240, 330));
 
+        jTDos.setBackground(new java.awt.Color(204, 204, 204));
+        jTDos.setForeground(new java.awt.Color(0, 0, 0));
         jTDos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
@@ -470,6 +520,9 @@ public class MenuDeProductos extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTDos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jTDos.setSelectionBackground(new java.awt.Color(0, 0, 0));
+        jTDos.setShowHorizontalLines(true);
         jTDos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTDosMouseClicked(evt);
@@ -480,13 +533,13 @@ public class MenuDeProductos extends javax.swing.JPanel {
         jPBACKfondo.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, 240, 330));
 
         cajaUno.setAlignment(java.awt.Label.CENTER);
-        cajaUno.setBackground(new java.awt.Color(102, 102, 102));
+        cajaUno.setBackground(new java.awt.Color(51, 51, 51));
         cajaUno.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         cajaUno.setForeground(new java.awt.Color(204, 204, 204));
         jPBACKfondo.add(cajaUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 240, 40));
 
         cajaDos.setAlignment(java.awt.Label.CENTER);
-        cajaDos.setBackground(new java.awt.Color(102, 102, 102));
+        cajaDos.setBackground(new java.awt.Color(51, 51, 51));
         cajaDos.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         cajaDos.setForeground(new java.awt.Color(204, 204, 204));
         jPBACKfondo.add(cajaDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 240, 40));

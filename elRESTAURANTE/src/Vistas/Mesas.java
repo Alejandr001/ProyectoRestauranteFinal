@@ -347,11 +347,11 @@ try {
     }//GEN-LAST:event_jLBUSCAR1MouseClicked
 
     private void jLBUSCAR1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBUSCAR1MouseEntered
-        // TODO add your handling code here:
+        jLBUSCAR1.setForeground(Color.yellow);
     }//GEN-LAST:event_jLBUSCAR1MouseEntered
 
     private void jLBUSCAR1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBUSCAR1MouseExited
-        // TODO add your handling code here:
+        jLBUSCAR1.setForeground(Color.DARK_GRAY);
     }//GEN-LAST:event_jLBUSCAR1MouseExited
 
     private void jLAGREGARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAGREGARMouseClicked
@@ -383,11 +383,11 @@ try {
     }//GEN-LAST:event_jLAGREGARMouseClicked
 
     private void jLAGREGARMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAGREGARMouseEntered
-        // TODO add your handling code here:
+        jLAGREGAR.setForeground(Color.yellow);
     }//GEN-LAST:event_jLAGREGARMouseEntered
 
     private void jLAGREGARMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAGREGARMouseExited
-        // TODO add your handling code here:
+jLAGREGAR.setForeground(Color.DARK_GRAY);
     }//GEN-LAST:event_jLAGREGARMouseExited
 
     private void jLMODIFICARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLMODIFICARMouseClicked
@@ -433,10 +433,12 @@ try {
 
     private void jLMODIFICARMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLMODIFICARMouseEntered
         // TODO add your handling code here:
+        jLMODIFICAR.setForeground(Color.yellow);
     }//GEN-LAST:event_jLMODIFICARMouseEntered
 
     private void jLMODIFICARMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLMODIFICARMouseExited
         // TODO add your handling code here:
+        jLMODIFICAR.setForeground(Color.DARK_GRAY);
     }//GEN-LAST:event_jLMODIFICARMouseExited
 
 

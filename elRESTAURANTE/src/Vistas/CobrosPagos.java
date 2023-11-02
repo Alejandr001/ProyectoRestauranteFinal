@@ -10,6 +10,7 @@ import Entidades.Mesa;
 import Entidades.Mesero;
 import Entidades.Pedido;
 import Entidades.PedidoProducto;
+import java.awt.Color;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.time.ZoneId;
@@ -285,6 +286,12 @@ public class CobrosPagos extends javax.swing.JPanel {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 label1MouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                label1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                label1MouseExited(evt);
+            }
         });
         jPanel1.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 50, 20));
 
@@ -495,6 +502,13 @@ public class CobrosPagos extends javax.swing.JPanel {
         cargarTablaDos(tot);
 
     }//GEN-LAST:event_label1MouseClicked
+
+    private void label1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label1MouseEntered
+        label1.setForeground(Color.yellow);
+    }//GEN-LAST:event_label1MouseEntered
+
+    private void label1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label1MouseExited
+label1.setForeground(Color.DARK_GRAY);    }//GEN-LAST:event_label1MouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

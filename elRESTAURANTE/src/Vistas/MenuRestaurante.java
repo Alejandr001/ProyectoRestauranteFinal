@@ -55,10 +55,12 @@ public class MenuRestaurante extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        Backg.setBackground(new java.awt.Color(0, 51, 51));
+        Backg.setBackground(new java.awt.Color(0, 0, 0));
+        Backg.setForeground(new java.awt.Color(255, 255, 255));
         Backg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLexit.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLexit.setForeground(new java.awt.Color(255, 255, 255));
         jLexit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLexit.setText("X");
         jLexit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -102,9 +104,9 @@ public class MenuRestaurante extends javax.swing.JFrame {
 
         Backg.add(jPTOP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 20));
 
-        jLCobrosPagos.setBackground(new java.awt.Color(51, 51, 51));
+        jLCobrosPagos.setBackground(new java.awt.Color(0, 51, 51));
         jLCobrosPagos.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLCobrosPagos.setForeground(new java.awt.Color(204, 204, 204));
+        jLCobrosPagos.setForeground(new java.awt.Color(255, 255, 255));
         jLCobrosPagos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLCobrosPagos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Icono/dollar_coin_money_icon_231321.png"))); // NOI18N
         jLCobrosPagos.setText("Caja");
@@ -157,9 +159,9 @@ public class MenuRestaurante extends javax.swing.JFrame {
 
         Backg.add(jPCONTENEDOR, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1000, 430));
 
-        jLinicio1.setBackground(new java.awt.Color(51, 51, 51));
+        jLinicio1.setBackground(new java.awt.Color(0, 51, 51));
         jLinicio1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLinicio1.setForeground(new java.awt.Color(204, 204, 204));
+        jLinicio1.setForeground(new java.awt.Color(255, 255, 255));
         jLinicio1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLinicio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Icono/Home_26982.png"))); // NOI18N
         jLinicio1.setText("Inicio");
@@ -180,9 +182,9 @@ public class MenuRestaurante extends javax.swing.JFrame {
         });
         Backg.add(jLinicio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 90, 40));
 
-        jLREservas.setBackground(new java.awt.Color(51, 51, 51));
+        jLREservas.setBackground(new java.awt.Color(0, 51, 51));
         jLREservas.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLREservas.setForeground(new java.awt.Color(204, 204, 204));
+        jLREservas.setForeground(new java.awt.Color(255, 255, 255));
         jLREservas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Icono/calendar_date_icon_231304.png"))); // NOI18N
         jLREservas.setText("Reservas");
         jLREservas.setToolTipText("");
@@ -204,9 +206,9 @@ public class MenuRestaurante extends javax.swing.JFrame {
         });
         Backg.add(jLREservas, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, 110, 40));
 
-        jLPedidos.setBackground(new java.awt.Color(51, 51, 51));
+        jLPedidos.setBackground(new java.awt.Color(0, 51, 51));
         jLPedidos.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLPedidos.setForeground(new java.awt.Color(204, 204, 204));
+        jLPedidos.setForeground(new java.awt.Color(255, 255, 255));
         jLPedidos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Icono/shopping_cart_icon_192637.png"))); // NOI18N
         jLPedidos.setText("Pedidos");
         jLPedidos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 1, true));
@@ -226,9 +228,9 @@ public class MenuRestaurante extends javax.swing.JFrame {
         });
         Backg.add(jLPedidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 110, 40));
 
-        jLMenu.setBackground(new java.awt.Color(51, 51, 51));
+        jLMenu.setBackground(new java.awt.Color(0, 51, 51));
         jLMenu.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLMenu.setForeground(new java.awt.Color(204, 204, 204));
+        jLMenu.setForeground(new java.awt.Color(255, 255, 255));
         jLMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Icono/menu_food_cafe_vintage_icon_147397.png"))); // NOI18N
         jLMenu.setText("Menu");
         jLMenu.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 1, true));
@@ -248,9 +250,9 @@ public class MenuRestaurante extends javax.swing.JFrame {
         });
         Backg.add(jLMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 90, 40));
 
-        jLMesas.setBackground(new java.awt.Color(51, 51, 51));
+        jLMesas.setBackground(new java.awt.Color(0, 51, 51));
         jLMesas.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLMesas.setForeground(new java.awt.Color(204, 204, 204));
+        jLMesas.setForeground(new java.awt.Color(255, 255, 255));
         jLMesas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Icono/house_kitchen_table_icon-icons.com_74372 (1).png"))); // NOI18N
         jLMesas.setText("Mesas");
         jLMesas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 1, true));
@@ -270,9 +272,9 @@ public class MenuRestaurante extends javax.swing.JFrame {
         });
         Backg.add(jLMesas, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, 100, 40));
 
-        jLPersonal.setBackground(new java.awt.Color(51, 51, 51));
+        jLPersonal.setBackground(new java.awt.Color(0, 51, 51));
         jLPersonal.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLPersonal.setForeground(new java.awt.Color(204, 204, 204));
+        jLPersonal.setForeground(new java.awt.Color(255, 255, 255));
         jLPersonal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Icono/Clients_27015.png"))); // NOI18N
         jLPersonal.setText("Personal");
@@ -324,13 +326,12 @@ public class MenuRestaurante extends javax.swing.JFrame {
     }//GEN-LAST:event_jLexitMouseEntered
 
     private void jLexitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLexitMouseClicked
-       JOptionPane.showMessageDialog(this, "Saliendo");
        System.exit(0);
     }//GEN-LAST:event_jLexitMouseClicked
 
     private void jLexitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLexitMouseExited
       jLexit.setBackground(new Color(240,240,240));
-       jLexit.setForeground(Color.BLACK);
+       jLexit.setForeground(Color.WHITE);
     }//GEN-LAST:event_jLexitMouseExited
 
     private void jLCobrosPagosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCobrosPagosMouseClicked
