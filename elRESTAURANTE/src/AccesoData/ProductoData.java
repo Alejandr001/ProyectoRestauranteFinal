@@ -1,5 +1,6 @@
 package AccesoData;
 
+import static AccesoData.Conexion.getConexion;
 import Entidades.Producto;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -98,37 +99,7 @@ public class ProductoData {
         return producto;
     }
     
-//    public Producto buscarProducto(int id) throws SQLException {
-//    Producto producto = null;
-//    String sql = "SELECT * FROM producto WHERE idProducto = ? AND disponible = 1";
-//    PreparedStatement ps = null;
-//    
-//    try {
-//        ps = con.prepareStatement(sql);
-//        ps.setInt(1, id);
-//        ResultSet rs = ps.executeQuery();
-//        if (rs.next()) {
-//            producto = new Producto(
-//                rs.getString("nombre"),
-//                rs.getString("categoria"),
-//                rs.getInt("cantidad"),
-//                rs.getInt("precio"),
-//                rs.getInt("disponible")
-//            );
-//            producto.setIdProducto(id);
-//        } else {
-//            JOptionPane.showMessageDialog(null, "No existe el Producto");
-//        }
-//    } catch (SQLException ex) {
-//        JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Producto: " + ex.getMessage());
-//    } finally {
-//        // Aquí sería conveniente cerrar la PreparedStatement y ResultSet
-//        if (ps != null) {
-//            ps.close();
-//        }
-//    }
-//    return producto;
-//}
+
 
     
     public Producto buscarProductoNombre(String nombre) {
@@ -171,32 +142,7 @@ public class ProductoData {
         return producto;
     }
 
-//    public Producto buscarProductoNombre(String nombre){
-//         Producto producto = null;
-//    String sql = "SELECT * FROM producto WHERE nombre = ? AND disponible = 1";
-//    PreparedStatement ps = null;
-//    try {
-//        ps = con.prepareStatement(sql);
-//        ps.setString(1, nombre);
-//        ResultSet rs = ps.executeQuery();
-//        if (rs.next()) {
-//            producto = new Producto(
-//                rs.getString("nombre"),
-//                rs.getString("categoria"),
-//                rs.getInt("cantidad"),
-//                rs.getInt("precio"),
-//                rs.getInt("disponible")
-//            );
-//            producto.setIdProducto(rs.getInt("idProducto"));
-//        } else {
-//            JOptionPane.showMessageDialog(null, "No existe el Producto");
-//        }
-//        
-//    } catch (SQLException ex) {
-//        JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Producto: " + ex.getMessage());
-//    }
-//    return producto;
-//    }
+
 
     public List<Producto> listarProductos(){
         List<Producto> productos = new ArrayList<>();
@@ -223,31 +169,57 @@ public class ProductoData {
         return productos;
     }
     
-    public List<Producto> listarProdxCategoria(String cat) {
-        List<Producto> productos = new ArrayList<>();
-        try {
-            String sql = "SELECT * FROM producto WHERE disponible = 1 AND cantidad > 0 AND categoria = ?";
-            PreparedStatement ps = con.prepareStatement(sql);
-            ps.setString(1, cat);
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                Producto producto = new Producto(
-                    rs.getString("nombre"),
-                    rs.getString("categoria"),
-                    rs.getInt("cantidad"),
-                    rs.getInt("precio"),
-                    rs.getInt("disponible")
-                       
-                );
-                producto.setIdProducto(rs.getInt("idProducto"));
-                productos.add(producto);
-            }
-            
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Producto: " + ex.getMessage());
+  public List<Producto> listarProdxCategoria(String cat) {
+    List<Producto> productos = new ArrayList();
+    Connection con = null;
+    PreparedStatement ps = null;
+    ResultSet rs = null;
+    
+    try {
+        con = getConexion(); // Obtener la conexión
+        String sql = "SELECT * FROM producto WHERE disponible = 1 AND cantidad > 0 AND categoria = ?";
+        ps = con.prepareStatement(sql);
+        ps.setString(1, cat);
+        rs = ps.executeQuery();
+        while (rs.next()) {
+            Producto producto = new Producto(
+                rs.getString("nombre"),
+                rs.getString("categoria"),
+                rs.getInt("cantidad"),
+                rs.getInt("precio"),
+                rs.getInt("disponible")
+            );
+            producto.setIdProducto(rs.getInt("idProducto"));
+            productos.add(producto);
         }
-        return productos;
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Producto: " + ex.getMessage());
+    } finally {
+        // Cerrar ResultSet, PreparedStatement y Connection en el bloque finally
+        if (rs != null) {
+            try {
+                rs.close();
+            } catch (SQLException e) {
+                // Manejar la excepción de cierre
+            }
+        }
+        if (ps != null) {
+            try {
+                ps.close();
+            } catch (SQLException e) {
+                // Manejar la excepción de cierre
+            }
+        }
+        if (con != null) {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                // Manejar la excepción de cierre
+            }
+        }
     }
+    return productos;
+}
 
     public void modificarProducto(Producto producto) {
         String sql = "UPDATE producto SET nombre = ?, categoria = ?, precio = ?, disponible = ?, cantidad = ? WHERE idProducto = ?";

@@ -47,6 +47,7 @@ public class Reservas extends javax.swing.JPanel {
     DefaultTableModel modelo = new DefaultTableModel();
     ReservaData rs = new ReservaData();
  private List<Reserva> listaUno;
+ private MesaData meData;
  
  
   
@@ -56,6 +57,7 @@ public class Reservas extends javax.swing.JPanel {
     public Reservas() {
         initComponents();
         armarCabecera();
+        meData = new MesaData();
         
         listaUno=rs.listarReservas();
         cargarDatos(listaUno);
@@ -403,6 +405,7 @@ public class Reservas extends javax.swing.JPanel {
             String horaString = jTextFieldHORA.getText();
             Time hora = Time.valueOf(horaString + ":00"); // Asumiendo que la hora está en formato HH:mm
             boolean estado = jRadioBuVIGENTE.isSelected();
+            meData.ocuparMesa(idMesa);
 
             if (!nombre.isEmpty() && !dni.isEmpty() && !horaString.isEmpty()) {
                 // Crear un objeto Reserva con los datos ingresados

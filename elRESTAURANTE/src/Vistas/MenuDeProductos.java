@@ -30,6 +30,10 @@ public class MenuDeProductos extends javax.swing.JPanel {
     }
     private List<Producto> listaUno;
     private List<Producto> listaDos;
+    private List<Producto> listaSeis;
+    private List<Producto> listaSiete;
+    private List<Producto> listaOcho;
+    private List<Producto> listaNueve;
     private List<Producto> listaTres = new ArrayList<>();
     private List<Mesa> listaCuatro;
     private List<Mesero> listaCinco;

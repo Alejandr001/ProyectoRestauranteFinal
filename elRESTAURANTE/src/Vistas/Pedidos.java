@@ -13,6 +13,7 @@ import java.awt.Color;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class Pedidos extends javax.swing.JPanel {
@@ -51,7 +52,7 @@ public class Pedidos extends javax.swing.JPanel {
         armarCabezera();
         cargarPedidos(0);
         cargarProductos();
-        cargarMesas();
+//        cargarMesas();
     }
 
     private void armarCabezera() {
@@ -105,13 +106,13 @@ public class Pedidos extends javax.swing.JPanel {
         System.out.println("salio del ciclo");
         setVisible(true);
     }
-    private void cargarMesas(){
-
-            for (Mesa mesa : listaCuatro) {
-            jComboBMESAS.addItem("Mesa N°: "+mesa.getIdMesa());
-            }
-       
-    }
+//    private void cargarMesas(){
+//
+//            for (Mesa mesa : listaCuatro) {
+//            jComboBMESAS.addItem("Mesa N°: "+mesa.getIdMesa());
+//            }
+//       
+//    }
     private void cargarProductos(){
 
             for (Producto p : listaCinco) {
@@ -129,7 +130,6 @@ public class Pedidos extends javax.swing.JPanel {
         jLBorrar = new javax.swing.JLabel();
         jLAgregar = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLBuscar = new javax.swing.JLabel();
         jLabelContendor = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -138,7 +138,6 @@ public class Pedidos extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel6 = new javax.swing.JLabel();
-        jComboBMESAS = new javax.swing.JComboBox<>();
         jRadioBuPediente = new javax.swing.JRadioButton();
         jRadioBuEntregado = new javax.swing.JRadioButton();
         jCProductos = new javax.swing.JComboBox<>();
@@ -209,28 +208,6 @@ public class Pedidos extends javax.swing.JPanel {
         jLabel3.setText("Pago");
         jPBACKfondo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 20, 130, 20));
 
-        jLBuscar.setBackground(new java.awt.Color(204, 204, 204));
-        jLBuscar.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLBuscar.setForeground(new java.awt.Color(51, 51, 51));
-        jLBuscar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Icono/search_magnifying_glass_icon_192631 (1).png"))); // NOI18N
-        jLBuscar.setText("Buscar");
-        jLBuscar.setToolTipText("");
-        jLBuscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLBuscar.setOpaque(true);
-        jLBuscar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLBuscarMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLBuscarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLBuscarMouseExited(evt);
-            }
-        });
-        jPBACKfondo.add(jLBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 50, 130, 70));
-
         jLabelContendor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setBackground(new java.awt.Color(51, 51, 51));
@@ -291,11 +268,6 @@ public class Pedidos extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelContendor.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, 50, 20));
-
-        jComboBMESAS.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jComboBMESAS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
-        jComboBMESAS.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jLabelContendor.add(jComboBMESAS, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 120, -1));
 
         jRadioBuPediente.setBackground(new java.awt.Color(243, 241, 244));
         jRadioBuPediente.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -444,8 +416,15 @@ public class Pedidos extends javax.swing.JPanel {
     private void jLCargaCajaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCargaCajaMouseClicked
        //cobro 
        //pasar el pedido a 1
-//       pedData.pagarPedido(idPedid)
+        System.out.println(""+ numAu);
+       boolean pago =pedData.pagarPedido(numAu);
+       if(pago){
+           cargarPedidos(0);
+           listaDos.clear();
+           cargarPep();
+           JOptionPane.showMessageDialog(this, "Pago procesado con exito");
        
+       }
     }//GEN-LAST:event_jLCargaCajaMouseClicked
 
     private void jLCargaCajaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCargaCajaMouseEntered
@@ -546,18 +525,6 @@ public class Pedidos extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCProductosActionPerformed
 
-    private void jLBuscarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBuscarMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLBuscarMouseExited
-
-    private void jLBuscarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBuscarMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLBuscarMouseEntered
-
-    private void jLBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBuscarMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLBuscarMouseClicked
-
     private void jRadioBuEntregadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioBuEntregadoMouseClicked
         jRadioBuPediente.setSelected(false);
         cargarPedidos(1);
@@ -575,10 +542,12 @@ public class Pedidos extends javax.swing.JPanel {
        
         Object valorPrimeraColumna = jTable1.getValueAt(filaSeleccionada, 0);
         int idPedido = Integer.parseInt(valorPrimeraColumna.toString());
+        numAu = idPedido;
         
         listaDos = pepData.listarPorIdPedido(idPedido);
         
         cargarPep();
+        
     }
         
     }//GEN-LAST:event_jTable1MousePressed
@@ -590,10 +559,8 @@ public class Pedidos extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jCProductos;
-    private javax.swing.JComboBox<String> jComboBMESAS;
     private javax.swing.JLabel jLAgregar;
     private javax.swing.JLabel jLBorrar;
-    private javax.swing.JLabel jLBuscar;
     private javax.swing.JLabel jLCargaCaja;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

@@ -335,16 +335,46 @@ public class MenuRestaurante extends javax.swing.JFrame {
 
     private void jLCobrosPagosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLCobrosPagosMouseClicked
          
+        //clave
+        String clave = JOptionPane.showInputDialog(this, "Ingrese clave de acceso:");
+        String claveReal="alejandro";
+        if (clave != null && !clave.isEmpty()) {
+            try {
+                if (claveReal.equals(clave)) {
+
+                    JOptionPane.showMessageDialog(this, "Acceso permitido");
+
+                    CobrosPagos p1 = new CobrosPagos();
+                    p1.setSize(1000, 440);
+                    p1.setLocation(0, 0);
+
+                    jPCONTENEDOR.removeAll();
+                    jPCONTENEDOR.add(p1, BorderLayout.CENTER);
+                    jPCONTENEDOR.revalidate();
+                    jPCONTENEDOR.repaint();
+                    System.out.println("aqui");
+                } else {
+                    JOptionPane.showMessageDialog(this, "Clave incorrecta");
+                }
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(this, "ID de reserva no válido. Ingrese un número válido.");
+            }
+        }
+
+      
+      
+      
+      
       
         
-       CobrosPagos p1= new CobrosPagos();
-        p1.setSize(1000, 440);
-        p1.setLocation(0,0);
-        
-        jPCONTENEDOR.removeAll();
-        jPCONTENEDOR.add(p1, BorderLayout.CENTER);
-        jPCONTENEDOR.revalidate();
-        jPCONTENEDOR.repaint();
+//       CobrosPagos p1= new CobrosPagos();
+//        p1.setSize(1000, 440);
+//        p1.setLocation(0,0);
+//        
+//        jPCONTENEDOR.removeAll();
+//        jPCONTENEDOR.add(p1, BorderLayout.CENTER);
+//        jPCONTENEDOR.revalidate();
+//        jPCONTENEDOR.repaint();
     }//GEN-LAST:event_jLCobrosPagosMouseClicked
 
     private void jPTOPMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPTOPMousePressed

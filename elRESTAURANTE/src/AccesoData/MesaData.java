@@ -190,4 +190,25 @@ public class MesaData {
         }
         return listaMesas;
     }
+    
+    public void ocuparMesa(int idMesa) {
+    try (Connection con = Conexion.getConexion()) {
+        String sql = "UPDATE mesa SET disponible = ? WHERE idMesa = ?";
+        try (PreparedStatement statement = con.prepareStatement(sql)) {
+            statement.setBoolean(1, false); 
+            statement.setInt(2, idMesa); 
+            int filasAfectadas = statement.executeUpdate();
+             
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    
+}
+    
+    
+    
+    
 }

@@ -89,4 +89,31 @@ public class PedidoData {
 
         return pedidos;
     }
+    
+    public List<Pedido> obtenerPedidosConFechaYEstado(Date fecha) {
+    List<Pedido> pedidos = new ArrayList<>();
+
+    try (Connection con = Conexion.getConexion();
+         PreparedStatement statement = con.prepareStatement("SELECT * FROM pedido WHERE fecha = ? AND estado = 1")) {
+        statement.setDate(1, new java.sql.Date(fecha.getTime())); // Convierte la fecha a tipo java.sql.Date
+        
+
+        try (ResultSet resultSet = statement.executeQuery()) {
+            while (resultSet.next()) {
+                int idPedido = resultSet.getInt("idPedido");
+                int idMesa = resultSet.getInt("idMesa");
+                int idMesero = resultSet.getInt("idMesero");
+                Date fechaPedido = resultSet.getDate("fecha");
+                boolean pedidoEstado = resultSet.getBoolean("estado");
+
+                Pedido pedido = new Pedido(idPedido, idMesa, idMesero, fechaPedido, pedidoEstado);
+                pedidos.add(pedido);
+            }
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+
+    return pedidos;
+}
 }
