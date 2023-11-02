@@ -38,13 +38,14 @@ import java.util.logging.Logger;
 import javafx.scene.control.RadioButton;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.table.DefaultTableModel;
 
 public class Reservas extends javax.swing.JPanel {
-
+    List<Mesa> listaDeMesas = new ArrayList<>();
     DefaultTableModel modelo = new DefaultTableModel();
     ReservaData rs = new ReservaData();
  private List<Reserva> listaUno;
@@ -482,8 +483,7 @@ jLMODIFICAR.setForeground(Color.DARK_GRAY);    }//GEN-LAST:event_jLMODIFICARMous
     }//GEN-LAST:event_jTextNombreActionPerformed
 
     private void jRadioBuNoVigenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioBuNoVigenteActionPerformed
-        // TODO add your handling code here:
-//         JOptionPane.showMessageDialog(null, "Reserva marcada como No Vigente");
+       
         if (jRadioBuNoVigente.isSelected()) {
        
         jRadioBuVIGENTE.setEnabled(false);
@@ -548,20 +548,38 @@ jLMODIFICAR.setForeground(Color.DARK_GRAY);    }//GEN-LAST:event_jLMODIFICARMous
         jTableReservas.setModel(modelo);
 
     }
- private void cargarDatos(List<Reserva> reservas) {
-    modelo.setRowCount(0);
+// private void cargarDatos(List<Reserva> reservas) {
+//    modelo.setRowCount(0);
+//    for (Reserva reserva : reservas) {
+//        modelo.addRow(new Object[] {reserva.getIdReserva(), reserva.getNombre(), reserva.getIdMesa(), reserva.getHora(),reserva.getFecha()});
+//    }
+//    setVisible(true);
+//            jTableReservas.setModel(modelo);
+
+private void cargarDatos(List<Reserva> reservas) {
+    
     for (Reserva reserva : reservas) {
-        modelo.addRow(new Object[] {reserva.getIdReserva(), reserva.getNombre(), reserva.getIdMesa(), reserva.getHora(),reserva.getFecha()});
+        Object[] rowData = new Object[5];
+        rowData[0] = reserva.getIdReserva(); // Guardar idReserva en la primera columna (oculta)
+        rowData[1] = reserva.getNombre();
+        rowData[2] = reserva.getIdMesa();
+        rowData[3] = reserva.getHora();
+        rowData[4] = reserva.getFecha();
+        modelo.addRow(rowData);
     }
+    
+    jTableReservas.setModel(modelo);
+    jTableReservas.getColumnModel().getColumn(0).setMinWidth(0); // Establecer ancho mínimo para la primera columna (oculta)
+    jTableReservas.getColumnModel().getColumn(0).setMaxWidth(0); // Establecer ancho máximo para la primera columna (oculta)
+    jTableReservas.getColumnModel().getColumn(0).setWidth(0); // Ocultar la primera columna
     setVisible(true);
-            jTableReservas.setModel(modelo);
-
-
+}
   
 }
+
     
     
-}
+
     
     
     
